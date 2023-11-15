@@ -18,18 +18,28 @@
 </head>
 <body>
     <main class="text-center" >
-        <button id="play" type="button" class="btn btn-success mt-3">Play</button>
-        <div>
-            <span>Machine Result:</span>
-            <span id="machineResult" class=" mt-3 fs-4 mx-2">--</span>
+        <!-- Random Game -->
+        <div class="bg-dark pb-2">
+            <button id="play" type="button" class="btn btn-success mt-3">Play</button>
+            <div>
+                <span>Machine Result:</span>
+                <span id="machineResult" class=" mt-3 fs-4 mx-2">--</span>
+            </div>
+            <div>      
+                <span>Gamer Result:</span>
+                <span id="gamerResult" class=" mt-3 fs-4 mx-2">--</span>
+            </div>
+            <div>
+                <span>Vincitore</span>
+                <p id="winner" class="bg-success"></p>
+            </div>
         </div>
-        <div>      
-            <span>Gamer Result:</span>
-            <span id="gamerResult" class=" mt-3 fs-4 mx-2">--</span>
-        </div>
-        <div>
-            <span>Vincitore</span>
-            <p id="winner"></p>
+
+        <!-- Ricerca Email -->
+        <div class="bg-success pb-2">
+            <input id="in-email" type="email" placeholder="type email">
+            <h2 id="emailResult" class="mt-2"></h2>
+            <button id="search" type="button" class="btn btn-warning mt-3">Search</button>
         </div>
     </main>
 </body>

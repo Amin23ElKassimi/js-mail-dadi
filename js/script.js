@@ -2,38 +2,34 @@
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-
 const play = document.querySelector('#play');
 
 play.addEventListener('click',function() {
 
     // Generare per il giocatore
-    const randomGamer = (Math.random() * 6) + 1;
-    document.getElementById("gamerResult").innerHTML = `${randomGamer.toFixed(0)}`;
+    let randomGamer = (Math.random() * 6) + 1;
+    randomGamer = randomGamer.toFixed(0);
+    document.getElementById("gamerResult").innerHTML = randomGamer;
 
     // Generare per il computer.
-    const randomMachine  = (Math.random() * 6) + 1;
-    document.getElementById("machineResult").innerHTML = `${randomMachine.toFixed(0)}`;
+    let randomMachine  = (Math.random() * 6) + 1;
+    randomMachine = randomMachine.toFixed(0);
+    document.getElementById("machineResult").innerHTML = randomMachine;
 
+    // Pari stampa
+    if (randomGamer == randomMachine) {
+        document.getElementById("winner").innerHTML = "Diventeremo dei Cyborg";
+    }
+
+    // Se il giocatore e' più alto vince,
     if (randomGamer > randomMachine) {
-        
-
+        document.getElementById("winner").innerHTML = "L'umanita' non perdera mai";
+    }
+    // Se il giocatore e' più Basso Perde,
+     if (randomGamer < randomMachine) {
+        document.getElementById("winner").innerHTML = "La macchine conquisteranno il mondo";
+    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -46,9 +42,62 @@ play.addEventListener('click',function() {
 
 
 
+const newArray = [
+    "EMAIL1",
+    "EMAIL2",
+    "EMAIL3",
+    "EMAIL4",
+    "EMAIL5",
+    "EMAIL6",
+    "EMAIL7",
+    "aminelkassimmi23@gmail.com",
+    "EMAIL9",
+    "EMAIL3",
+    "EMAILasg",
+    "EMAILsadgv",
+    "EMAILsresgg",
+    "EMAILresg",
+    "EMAILhtgfd",
+    "EMAILhgf",
+    "EMAILhf",
+    "EMAILhtr",
+    "EMAIL243",
+    "EMAIL4rth",
+    "EMAILhgtfrd",
+    "EMAILerfg",
+    "EMAILfds",
+    "EMAILerfg",
+    "EMAILarets",
+    "EMAIL4r",
+    "EMAILiulyk",
+    "EMAILater5trshr",
+    "EMAILwaeyhtrsjydg",
+    "EMAILmyrnhtgb",
+    "EMAILzdhxnm ",
+    "EMAIL",
+]
+let len = newArray.length;
 
 
+// ############## CLICK ##############
+const search = document.querySelector('#search');
+search.addEventListener('click',function() {
 
+            // --------------- FOR ---------------
+        for (var i = 0; i < len; i++) {
+            const email = document.getElementById("in-email");
+
+            if (email.value == newArray[i]) {
+                console.log("Email trovato");
+                alert("Email trovato");
+            }
+            else{
+                console.log("Email non trovato");
+                // alert("Email non trovato");
+            }
+        }
+
+});
 
 
 
